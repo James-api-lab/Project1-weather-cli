@@ -15,7 +15,11 @@ def get_weather(city: str) -> str:
     if r.status_code == 200:
         d = r.json()
         return f"{city}: {d['main']['temp']}°C, Humidity {d['main']['humidity']}%"
-    return f"Error for {city}: {r.status_code} {r.text}"
+    if r.status_code == 404:
+        return f"{city}: not found (check spelling)"
+    if r.status_code == 401:
+        return "Auth error: check OPENWEATHER_API_KEY in week2/.env"
+    return f"Error {r.status_code}: {r.text[:140]}"
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:

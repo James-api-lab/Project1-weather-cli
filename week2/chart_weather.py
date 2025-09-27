@@ -24,9 +24,10 @@ with csv_path.open("r", encoding="utf-8", newline="") as f:
         s["dates"].append(dt)
         s["temps"].append(temp)
 
-# plot (show single points + tighten x-axis)
+# plot (show single points + tighten axes)
 plt.figure(figsize=(9, 5))
 all_dates = []
+all_temps = []
 
 for city, data in sorted(series.items()):
     pairs = sorted(zip(data["dates"], data["temps"]), key=lambda x: x[0])
@@ -34,27 +35,33 @@ for city, data in sorted(series.items()):
         continue
     dates, temps = zip(*pairs)
     all_dates.extend(dates)
+    all_temps.extend(temps)
 
     if len(dates) == 1:
         plt.scatter(dates, temps, label=city)
     else:
         plt.plot(dates, temps, marker="o", linewidth=2, label=city)
 
+# tighten x/y ranges
 if all_dates:
     xmin, xmax = min(all_dates), max(all_dates)
     pad = timedelta(days=1)
     plt.xlim(xmin - pad, xmax + pad)
+if all_temps:
+    ypad = 2
+    plt.ylim(min(all_temps) - ypad, max(all_temps) + ypad)
 
+# date formatting
 ax = plt.gca()
 ax.xaxis.set_major_locator(mdates.AutoDateLocator())
 ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
 plt.gcf().autofmt_xdate()
+
 plt.title("Daily Temperature by City")
 plt.xlabel("Date")
 plt.ylabel("Temp (°C)")
 plt.grid(True, alpha=0.3)
 plt.legend(loc="best")
-out_path.parent.mkdir(parents=True, exist_ok=True)
 plt.tight_layout()
 plt.savefig(out_path, dpi=150)
 print(f"Saved chart → {out_path}")

@@ -1,0 +1,33 @@
+2025-09-27 14:34:10,958 INFO run units=metric cities=['Seattle', 'Tokyo']
+2025-09-27 14:34:11,572 INFO Seattle: 22.80°C, Humidity 52%
+2025-09-27 14:34:11,585 INFO Tokyo: 24.24°C, Humidity 63%
+2025-09-27 14:34:11,907 INFO run units=imperial cities=['New York', 'London']
+2025-09-27 14:34:12,491 INFO New York: 74.89°F, Humidity 64%
+2025-09-27 14:34:12,509 INFO London: 53.13°F, Humidity 82%
+2025-09-27 14:34:12,820 INFO run units=metric cities=[]
+2025-09-27 14:34:18,425 INFO Sao Paulo: 18.27°C, Humidity 68%
+2025-09-27 14:35:15,731 INFO run units=imperial cities=['New York', 'London']
+2025-09-27 14:35:16,233 INFO New York: 75.24°F, Humidity 63%
+2025-09-27 14:35:16,251 INFO London: 53.26°F, Humidity 79%
+2025-09-27 14:38:06,004 INFO run units=imperial cities=['New York', 'London', 'Sao Paulo', 'Beijing']
+2025-09-27 14:38:06,502 INFO New York: 76.41°F, Humidity 64%
+2025-09-27 14:38:06,513 INFO London: 53.26°F, Humidity 79%
+2025-09-27 14:38:06,530 INFO Sao Paulo: 64.89°F, Humidity 68%
+2025-09-27 14:38:06,549 INFO Beijing: 63.46°F, Humidity 77%
+2025-09-27 15:00:57,495 INFO run units=imperial timeout=10 retries=3 backoff=0.5 cities=[]
+2025-09-27 15:03:13,841 INFO New York: 74.59°F, Humidity 64%
+2025-09-27 15:03:15,959 INFO run units=imperial timeout=10 retries=3 backoff=0.5 cities=['New York', 'London']
+2025-09-27 15:03:16,449 INFO New York: 74.59°F, Humidity 64%
+2025-09-27 15:03:16,465 INFO London: 52.99°F, Humidity 80%
+2025-09-27 15:04:06,910 INFO run units=imperial timeout=10 retries=3 backoff=0.5 cities=['New York', 'London']
+2025-09-27 15:04:07,437 INFO New York: 74.59°F, Humidity 64%
+2025-09-27 15:04:07,452 INFO London: 52.99°F, Humidity 80%
+2025-09-27 15:04:12,280 INFO run units=imperial timeout=10 retries=3 backoff=0.5 cities=['New York', 'London']
+2025-09-27 15:04:12,761 INFO New York: 74.59°F, Humidity 64%
+2025-09-27 15:04:12,773 INFO London: 52.99°F, Humidity 80%
+2025-09-27 15:04:13,074 INFO run units=metric timeout=10 retries=3 backoff=0.5 cities=['Seattle', 'Tokyo']
+2025-09-27 15:04:13,579 INFO Seattle: 23.20°C, Humidity 45%
+2025-09-27 15:04:13,593 INFO Tokyo: 24.64°C, Humidity 62%
+2025-09-27 15:04:13,968 INFO run units=imperial timeout=5 retries=5 backoff=1.0 cities=['Sao Paulo']
+2025-09-27 15:04:14,457 INFO Sao Paulo: 64.87°F, Humidity 78%
+2025-09-27 15:04:14,922 INFO run units=imperial timeout=10 retries=3 backoff=0.5 cities=[]

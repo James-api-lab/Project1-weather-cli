@@ -1,0 +1,4 @@
+date,city,temp_c,humidity,feels_like_c,conditions
+2025-09-27,Seattle,67.55,56,66.63,overcast clouds
+2025-09-27,London,56.5,71,55.18,clear sky
+2025-09-27,Tokyo,75.34,61,75.45,broken clouds

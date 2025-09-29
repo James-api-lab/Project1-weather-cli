@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+james_weather_cli.egg-info/PKG-INFO
+james_weather_cli.egg-info/SOURCES.txt
+james_weather_cli.egg-info/dependency_links.txt
+james_weather_cli.egg-info/entry_points.txt
+james_weather_cli.egg-info/requires.txt
+james_weather_cli.egg-info/top_level.txt
+week2/__init__.py
+week2/chart_weather.py
+week2/http_utils.py
+week2/log_weather_daily.py
+week2/settings.py
+week2/weather_cli.py
+week2/weather_one_city.py
+week2/tests/check_env.py
+week2/tests/hello.py

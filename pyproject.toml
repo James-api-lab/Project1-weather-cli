@@ -16,6 +16,8 @@ dependencies = [
 
 [project.scripts]
 weather = "week2.weather_cli:main"
+weather-daily = "week2.run_log_and_chart:main"
+
 
 [tool.setuptools.packages.find]
 include = ["week2*"]

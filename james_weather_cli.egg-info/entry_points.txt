@@ -1,0 +1,3 @@
+[console_scripts]
+weather = week2.weather_cli:main
+weather-daily = week2.run_log_and_chart:main

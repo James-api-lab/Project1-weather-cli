@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "james-weather-cli"
+version = "0.1.0"
+description = "A tiny, production-ish Weather CLI (requests + dotenv + retries/backoff)."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "requests",
+  "python-dotenv",
+  "matplotlib",
+]
+
+[project.scripts]
+weather = "week2.weather_cli:main"
+
+[tool.setuptools.packages.find]
+include = ["week2*"]

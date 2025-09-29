@@ -68,7 +68,7 @@ python week2/weather_cli.py --timeout 5 --retries 5 --backoff 1.0 London
 
 # read cities from a file (one per line)
 python week2/weather_cli.py --units imperial --cities-file cities.txt
-```
+
 ### JSON & one-off CSV
 ```bash
 # JSON lines (one per city)
@@ -76,7 +76,7 @@ python week2/weather_cli.py --units imperial "New York" London --json
 
 # Append to the main log (via .env CSV_OUT)
 python week2/weather_cli.py --units metric Seattle Tokyo
-
+```
 
 **Flags**
 
@@ -171,6 +171,7 @@ Project1-weather-cli/
 ## Why sessions & retries?
 
 `http_utils.make_session()` reuses connections and automatically retries transient errors with backoff so your daily jobs are faster and more reliable.
+
 
 
 

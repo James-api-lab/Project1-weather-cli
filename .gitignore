@@ -12,3 +12,6 @@ Thumbs.db
 logs/
 data/weather_chart.png
 data/run_*.csv
+
+data/weather_log.csv
+data/cache/

@@ -8,3 +8,7 @@ venv/
 week2/.env
 .DS_Store
 Thumbs.db
+
+logs/
+data/weather_chart.png
+data/run_*.csv

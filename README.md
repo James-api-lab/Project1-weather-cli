@@ -93,6 +93,14 @@ After `pip install -e .`:
 - `weather --units metric Seattle Tokyo --json`
 - `weather-daily`  # logs then regenerates chart
 
+### Performance options
+- `--max-workers N`  Run city requests in parallel (I/O-bound speedup). Omit to auto-pick.
+- `--cache-day`      Reuse successful results for the current day (per-units) from `data/cache/YYYY-MM-DD_units.json`.
+
+Examples:
+```bash
+weather --units imperial --cache-day --max-workers 6 "New York" London Tokyo
+weather --json --cache-day Miami
 
 ---
 
@@ -179,6 +187,7 @@ Project1-weather-cli/
 ## Why sessions & retries?
 
 `http_utils.make_session()` reuses connections and automatically retries transient errors with backoff so your daily jobs are faster and more reliable.
+
 
 
 

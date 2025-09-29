@@ -78,6 +78,7 @@ python week2/weather_cli.py --units imperial "New York" London --json
 python week2/weather_cli.py --units metric Seattle Tokyo
 ```
 
+
 **Flags**
 
 * `--units {metric,imperial,standard}` → prints °C/°F/K accordingly
@@ -85,6 +86,13 @@ python week2/weather_cli.py --units metric Seattle Tokyo
 * `--retries INT` (transient 429/5xx)
 * `--backoff FLOAT` (exponential backoff)
 * `--cities-file PATH` (one city per line)
+
+### Installed CLI
+After `pip install -e .`:
+- `weather --units imperial "New York" London`
+- `weather --units metric Seattle Tokyo --json`
+- `weather-daily`  # logs then regenerates chart
+
 
 ---
 
@@ -171,6 +179,7 @@ Project1-weather-cli/
 ## Why sessions & retries?
 
 `http_utils.make_session()` reuses connections and automatically retries transient errors with backoff so your daily jobs are faster and more reliable.
+
 
 
 
